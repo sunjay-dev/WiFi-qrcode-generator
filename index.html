@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Generate a WiFi QR code quickly and easily. Share your network credentials securely with guests by creating a QR code for your WiFi name and password. Supports WPA/WPA2/WPA3, WEP, and hidden SSIDs.">
+  <meta name="keywords"
+    content="WiFi QR code generator, QR code WiFi, generate QR code, WiFi password QR code, secure QR code, hidden SSID QR code, WPA3 QR code, WPA2-EAP QR code, share WiFi QR code, sunjay kumar, sunjay dev, sunjay-dev">
+  <title>Wifi QR Code Generator</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
+    integrity="sha512-ZDSPMa/JM1D+7kdg2x3BsruQ6T/JpJo3jWDWkCZsP+5yVyp1KfESqLI+7RqB5k24F7p2cV7i2YHh/890y6P6Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <h1 class="privacy-note">WiFi QR Code Generator</h1>
+    <p class="privacy-note">Quickly generate a QR code for your WiFi network. Just enter your WiFi name and password,
+      and share the QR code with your guests!</p>
+    <p class="privacy-note">We ensure your WiFi password isn’t saved in our records or on our server.</p>
+  </div>
+
+  <div class="container" id="containerId">
+
+    <img src="qrcode.png" alt="qrcode114" class="qrcodeClass" id="qrImage" />
+
+    <div class="form-container">
+      <div class="Name-Conainer">
+        <span>WiFi Name</span>
+        <input type="text" placeholder="WiFi Name" class="nameInput" id="ssidID" />
+      </div>
+      <div class="Password-Conainer privacy-note">
+        <span>WiFi Password</span>
+        <input type="text" placeholder="WiFi Password" class="passwordInput" id="passID" />
+      </div>
+      <button class="buttonClass privacy-note">Print</button>
+      <details class="privacy-note">
+        <summary>
+          Advanced
+          <span class="arrow">&#9660;</span>
+        </summary>
+        <div>
+          <input type="checkbox" id="hiddenSSID" class="wpa-security" name="hiddenSSID" value="hiddenSSID">
+          <label for="hiddenSSID">Hidden SSID</label>
+          <br>
+          <h3>Encryption</h3>
+          <input type="radio" id="wpa" class="wpa-security" name="wpa-security" value="WPA2" checked>
+          <label for="wpa">WPA/WPA2/WPA3</label>
+          <br>
+          <input type="radio" id="wpa2-eap" class="wpa-security" name="wpa-security" value="WPA2-EAP">
+          <label for="wpa2-eap">WPA2-EAP</label>
+          <br>
+          <input type="radio" id="wep" class="wpa-security" name="wpa-security" value="WEP">
+          <label for="wep">WEP</label>
+          <br>
+          <h3>Qrcodes to print</h3>
+          <input type="number" min="1" value="1" id="num_codes" class="nameInput">
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <p class="ending-note privacy-note">*Please leave the `Password` field blank if your WiFi Security is Open.</p>
+  <script src="script.js"></script>
+</body>
+
+</html>
